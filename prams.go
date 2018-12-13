@@ -1,7 +1,5 @@
 package prams
-
 import("os")
-
 func Get(str string) (string, bool){
 	a := os.Args[1:];
 	argsString := ""

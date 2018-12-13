@@ -2,11 +2,12 @@ package main
 
 import(
 	"fmt"
-	"github.com/bryku/terminal/terminal"
+	"github.com/bryku/prams"
 )
 
 func main(){
-	help, isHelp := terminal.Arg("-help")
+
+	help, isHelp := prams.Get("-help")
 	// help = the follow str after the arg
 	// isHelp = if the arg is found
 		if(isHelp == true){
@@ -16,21 +17,4 @@ func main(){
 	fmt.Print("Help = \"",help,"\"\n")
 	fmt.Print("isHelp = \"",isHelp,"\"\n")
 
-	terminal.Size("100","40")
-
 }
-/* Examples
-
-    ./example
-    Help = ""
-    isHelp = false
-
-    ./example -help
-    Help = ""
-    isHelp = true
-
-    ./example -help helloworld
-    Help = "helloworld"
-    isHelp = true
-    
-*/

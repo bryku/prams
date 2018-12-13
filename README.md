@@ -1,38 +1,49 @@
-# terminal
-handles prams in terminal, similar to golangs flags, but 20 times smaller,
+# prams
+handles parameters in terminal, similar to golangs flags, but very small and compact
 
-### terminal.Arg()
-
+### Example
 ---
+package main
+
+import(
+	"fmt"
+	"github.com/bryku/prams"
+)
+
 func main(){
-	help, isHelp := terminal.Arg("-help")
+
+	help, isHelp := prams.Get("-help")
+	// help = the follow str after the arg
+	// isHelp = if the arg is found
 		if(isHelp == true){
 			// do something
 		}
 
 	fmt.Print("Help = \"",help,"\"\n")
 	fmt.Print("isHelp = \"",isHelp,"\"\n")
+
 }
 ---
 
-    ./example
-    Help = ""
-    isHelp = false
+### Usages  './main'
 
-    ./example -help
-    Help = ""
-    isHelp = true
+**Output:** 
 
-    ./example -help helloworld
-    Help = "helloworld"
-    isHelp = true
-    
-### **CODE** terminal.Size()
+	Help = ""
+	isHelp = false
 
----
-func main(){
-	terminal.Size("100","40")
-}
----
+### Usages  './main -help'
 
-Sets terminal gui size (cols, rows)
+**Output:** 
+
+	Help = ""
+	isHelp = true
+
+### Usages  './main -help me'
+
+**Output:** 
+
+	Help = "me"
+	isHelp = true
+
+

@@ -1,7 +1,7 @@
 package prams
 import("os")
 func Get(str string) (string, bool){
-	a := os.Args[1:];
+	a := os.Args[1:]
 	argsString := ""
 	argsBool := false
 	for key, _ := range a {

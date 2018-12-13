@@ -1,7 +1,7 @@
 # prams
 handles parameters in terminal, similar to golangs flags, but very small and compact
 
-### Example
+### example.go
 
 	package main
 	import(
